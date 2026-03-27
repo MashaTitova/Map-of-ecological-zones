@@ -1,0 +1,12 @@
+D:\_git\Map-of-ecological-zones\WorkWithGraphsClassLibrary\bin\Debug\net10.0\WorkWithGraphsClassLibrary.deps.json
+D:\_git\Map-of-ecological-zones\WorkWithGraphsClassLibrary\bin\Debug\net10.0\WorkWithGraphsClassLibrary.dll
+D:\_git\Map-of-ecological-zones\WorkWithGraphsClassLibrary\bin\Debug\net10.0\WorkWithGraphsClassLibrary.pdb
+D:\_git\Map-of-ecological-zones\WorkWithGraphsClassLibrary\obj\Debug\net10.0\WorkWithGraphsClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\_git\Map-of-ecological-zones\WorkWithGraphsClassLibrary\obj\Debug\net10.0\WorkWithGraphsClassLibrary.AssemblyInfoInputs.cache
+D:\_git\Map-of-ecological-zones\WorkWithGraphsClassLibrary\obj\Debug\net10.0\WorkWithGraphsClassLibrary.AssemblyInfo.cs
+D:\_git\Map-of-ecological-zones\WorkWithGraphsClassLibrary\obj\Debug\net10.0\WorkWithGraphsClassLibrary.csproj.CoreCompileInputs.cache
+D:\_git\Map-of-ecological-zones\WorkWithGraphsClassLibrary\obj\Debug\net10.0\WorkWithGraphsClassLibrary.sourcelink.json
+D:\_git\Map-of-ecological-zones\WorkWithGraphsClassLibrary\obj\Debug\net10.0\WorkWithGraphsClassLibrary.dll
+D:\_git\Map-of-ecological-zones\WorkWithGraphsClassLibrary\obj\Debug\net10.0\refint\WorkWithGraphsClassLibrary.dll
+D:\_git\Map-of-ecological-zones\WorkWithGraphsClassLibrary\obj\Debug\net10.0\WorkWithGraphsClassLibrary.pdb
+D:\_git\Map-of-ecological-zones\WorkWithGraphsClassLibrary\obj\Debug\net10.0\ref\WorkWithGraphsClassLibrary.dll
