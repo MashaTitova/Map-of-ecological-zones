@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Map-of-ecological-zones")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4ce1b8cb4eb9460817a569cffaca87d610d854d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ef1c0253ac67fef8c0c8f9bf6002ea34ccb1941")]
 [assembly: System.Reflection.AssemblyProductAttribute("Map-of-ecological-zones")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Map-of-ecological-zones")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

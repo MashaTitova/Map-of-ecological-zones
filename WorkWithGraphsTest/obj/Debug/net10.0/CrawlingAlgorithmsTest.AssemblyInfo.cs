@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("WorkWithGraphsClassLibrary")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("CrawlingAlgorithmsTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ef1c0253ac67fef8c0c8f9bf6002ea34ccb1941")]
-[assembly: System.Reflection.AssemblyProductAttribute("WorkWithGraphsClassLibrary")]
-[assembly: System.Reflection.AssemblyTitleAttribute("WorkWithGraphsClassLibrary")]
+[assembly: System.Reflection.AssemblyProductAttribute("CrawlingAlgorithmsTest")]
+[assembly: System.Reflection.AssemblyTitleAttribute("CrawlingAlgorithmsTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.
