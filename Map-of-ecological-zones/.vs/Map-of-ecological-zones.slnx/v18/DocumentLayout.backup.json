@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "D:\\_git\\Map-of-ecological-zones\\Map-of-ecological-zones\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4437C661-A913-41A4-9B8C-5D4042F07E2C}|..\\WorkWithGraphsClassLibrary\\WorkWithGraphsClassLibrary.csproj|d:\\_git\\map-of-ecological-zones\\workwithgraphsclasslibrary\\\u0441rawling\u0430lgorithms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_git\\Map-of-ecological-zones\\CrawlingAlgorithmsTest\\UnitTest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9840CFC-4D51-EFFB-3BDB-A09285A2EECF}|Map-of-ecological-zones.csproj|D:\\_git\\Map-of-ecological-zones\\Map-of-ecological-zones\\map-of-ecological-zones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -38,14 +38,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "\u0421rawling\u0410lgorithms.cs",
-              "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithms.cs",
-              "RelativeDocumentMoniker": "..\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithms.cs",
-              "ToolTip": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithms.cs",
-              "RelativeToolTip": "..\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithms.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHsAAAAJAAAAAAAAAA==",
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\CrawlingAlgorithmsTest\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\CrawlingAlgorithmsTest\\UnitTest1.cs",
+              "ToolTip": "D:\\_git\\Map-of-ecological-zones\\CrawlingAlgorithmsTest\\UnitTest1.cs",
+              "RelativeToolTip": "..\\CrawlingAlgorithmsTest\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T18:17:09.34Z",
+              "WhenOpened": "2026-03-28T11:26:41.894Z",
               "EditorCaption": ""
             },
             {
@@ -70,8 +70,7 @@
               "ToolTip": "D:\\_git\\Map-of-ecological-zones\\Map-of-ecological-zones\\Map-of-ecological-zones.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "Map-of-ecological-zones.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T09:24:13.426Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2026-03-24T09:24:13.426Z"
             }
           ]
         }

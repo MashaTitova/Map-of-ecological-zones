@@ -3,15 +3,12 @@
   "WorkspaceRootPath": "D:\\_git\\Map-of-ecological-zones\\Map-of-ecological-zones\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C9840CFC-4D51-EFFB-3BDB-A09285A2EECF}|Map-of-ecological-zones.csproj|D:\\_git\\Map-of-ecological-zones\\Map-of-ecological-zones\\map-of-ecological-zones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C9840CFC-4D51-EFFB-3BDB-A09285A2EECF}|Map-of-ecological-zones.csproj|solutionrelative:map-of-ecological-zones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4437C661-A913-41A4-9B8C-5D4042F07E2C}|..\\WorkWithGraphsClassLibrary\\WorkWithGraphsClassLibrary.csproj|d:\\_git\\map-of-ecological-zones\\workwithgraphsclasslibrary\\\u0441rawling\u0430lgorithms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9840CFC-4D51-EFFB-3BDB-A09285A2EECF}|Map-of-ecological-zones.csproj|d:\\_git\\map-of-ecological-zones\\map-of-ecological-zones\\map-of-ecological-zones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9840CFC-4D51-EFFB-3BDB-A09285A2EECF}|Map-of-ecological-zones.csproj|solutionrelative:map-of-ecological-zones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9840CFC-4D51-EFFB-3BDB-A09285A2EECF}|Map-of-ecological-zones.csproj|D:\\_git\\Map-of-ecological-zones\\Map-of-ecological-zones\\map-of-ecological-zones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C9840CFC-4D51-EFFB-3BDB-A09285A2EECF}|Map-of-ecological-zones.csproj|solutionrelative:map-of-ecological-zones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,33 +34,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "\u0421rawling\u0410lgorithms.cs",
-              "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithms.cs",
-              "RelativeDocumentMoniker": "..\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithms.cs",
-              "ToolTip": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithms.cs",
-              "RelativeToolTip": "..\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithms.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T18:17:09.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Map-of-ecological-zones.cs",
               "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\Map-of-ecological-zones\\Map-of-ecological-zones.cs",
               "RelativeDocumentMoniker": "Map-of-ecological-zones.cs",
               "ToolTip": "D:\\_git\\Map-of-ecological-zones\\Map-of-ecological-zones\\Map-of-ecological-zones.cs",
               "RelativeToolTip": "Map-of-ecological-zones.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAkwBYBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T09:37:25.673Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Map-of-ecological-zones.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\Map-of-ecological-zones\\Map-of-ecological-zones.cs",
               "RelativeDocumentMoniker": "Map-of-ecological-zones.cs",
