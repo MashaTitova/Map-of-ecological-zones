@@ -2,11 +2,11 @@
 
 namespace CrawlingAlgorithmsTest
 {
-    public class UnitTest1
+    public class CrawlingAlgorithmsTest
     {
         private Dictionary<string, List<Tuple<string, double>>> adjacencyList;
 
-        public UnitTest1()
+        public CrawlingAlgorithmsTest()
         {
             adjacencyList = new Dictionary<string, List<Tuple<string, double>>>();
             GetAdjacencyList();
