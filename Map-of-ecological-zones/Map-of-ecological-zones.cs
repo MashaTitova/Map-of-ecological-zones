@@ -193,9 +193,18 @@ namespace Map_of_ecological_zones
             for (int i = 0; i < lines.Length; i++)
             {
                 if (string.IsNullOrEmpty(lines[i].Trim())) continue; // Пропускаем пустые строки
-
                 var parts = lines[i].Split(':');
                 var vertex = parts[0].Trim(); // Вершина (например, "L")
+                if (vertex == "")
+                {
+                    MessageBox.Show(
+                      "Значение введено неверно \n" +
+                      $"Ошибка в строке {i + lines.Length + 6}",
+                      "Ошибка",
+                      MessageBoxButtons.OK,
+                      MessageBoxIcon.Error);
+                    return;
+                }
                 comboBox_VertexIn.Items.Add(vertex);
                 comboBox_VertexFrom.Items.Add(vertex);
                 comboBox_ChooseDFS.Items.Add(vertex);
@@ -209,12 +218,47 @@ namespace Map_of_ecological_zones
                     var neighbors = neighborsStr.Split(' '); // Разбиваем по пробелам
                     foreach (var neighborStr in neighbors)
                     {
+                        if (neighborsStr == "")
+                        {
+                            MessageBox.Show(
+                                "Соседняя экологическая зона введена неверно \n" +
+                                $"Ошибка в строке {i + lines.Length + 6}",
+                                "Ошибка",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                            return;
+                        }
                         // Извлекаем название вершины и вес
                         var nameAndWeight = neighborStr.Trim();
                         var name = nameAndWeight.Split('(')[0]; // Название вершины (например, "E")
+                        if (name == "")
+                        {
+                            MessageBox.Show(
+                                "Имя соседней экологической зоны  введено неверно \n" +
+                                $"Ошибка в строке {i + lines.Length + 6}",
+                                "Ошибка",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                            return;
+                        }
                         string weightStr = nameAndWeight.Split('(')[1].Replace(")", "");
-                        var weight = double.Parse(weightStr);
-                        neighborList.Add(Tuple.Create(name, weight));
+                        double weight;
+                        try
+                        {
+                            weight = double.Parse(weightStr);
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show(
+                              "Длина экологического коридора введена неверно \n" +
+                               $"Ошибка в строке {i + lines.Length + 6}",
+                              "Ошибка",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Error);
+                            return;
+                        }
+
+                            neighborList.Add(Tuple.Create(name, weight));
                     }
 
                 }
@@ -341,6 +385,24 @@ namespace Map_of_ecological_zones
                     textBox_ConnectivityСomponents.Text = ex.Message;
                     return;
                 }
+            }
+        }
+        private void GetInfo(object sender, EventArgs e)
+        {
+            if(tabControl_BypassAlgorithm.Visible == true)
+            {
+
+                MessageBox.Show(
+                  "В  данном разделе производится обход карты экологических зон двумя способами (BFS и DFS)," +
+                  " нахождение возможности перехода от одного экологического объекта к другому " +
+                  "и определения экологических ареалов связности. \n" +
+                  "В правой части окна можно увидеть исходные данные: описание природных объектов и экологических коридоров. \n" +
+                  "В левой части при выборе раздела \"Алгоритмы обхода\" при нажатии соответствующих кнопок производится обход графа методами BFS и DFS. \n" +
+                  "При выборе раздела \"Связность\" при нажатии соответствующих кнопок производятся нахождение возможности перехода от одного экологического объекта к другому и определение экологических ареалов связности.\n" +
+                  "Для начала работы алгоритмов необходимо выбрать вершину из предложенных и нажать на сообветствующую подразделу кнопку  \"Рассчитать\".\n",
+                  "Справка пользователя",
+                  MessageBoxButtons.OK,
+                  MessageBoxIcon.Asterisk);
             }
         }
     }

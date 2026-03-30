@@ -232,7 +232,7 @@
             label_ChooseDFS.Name = "label_ChooseDFS";
             label_ChooseDFS.Size = new Size(558, 50);
             label_ChooseDFS.TabIndex = 11;
-            label_ChooseDFS.Text = "Выберете начальную вершину";
+            label_ChooseDFS.Text = "Выберете начальную зону";
             label_ChooseDFS.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button_DFS
@@ -256,7 +256,7 @@
             label_OrderDFS.Name = "label_OrderDFS";
             label_OrderDFS.Size = new Size(738, 50);
             label_OrderDFS.TabIndex = 6;
-            label_OrderDFS.Text = "Порядок посещения вершин";
+            label_OrderDFS.Text = "Порядок посещения экологических зон";
             label_OrderDFS.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // textBox_OrderDFS
@@ -313,9 +313,9 @@
             label_ChooseBFS.ForeColor = SystemColors.ActiveCaptionText;
             label_ChooseBFS.Location = new Point(20, 61);
             label_ChooseBFS.Name = "label_ChooseBFS";
-            label_ChooseBFS.Size = new Size(558, 50);
+            label_ChooseBFS.Size = new Size(561, 50);
             label_ChooseBFS.TabIndex = 6;
-            label_ChooseBFS.Text = "Выберете начальную вершину";
+            label_ChooseBFS.Text = "Выберете начальную зону";
             label_ChooseBFS.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button_BFS
@@ -340,7 +340,7 @@
             label_OrderBFS.Name = "label_OrderBFS";
             label_OrderBFS.Size = new Size(738, 50);
             label_OrderBFS.TabIndex = 4;
-            label_OrderBFS.Text = "Порядок посещения вершин";
+            label_OrderBFS.Text = "Порядок посещения экологических зон";
             label_OrderBFS.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // textBox_OrderBFS
@@ -375,7 +375,7 @@
             tabPage_GraphСonnectivity.Padding = new Padding(3);
             tabPage_GraphСonnectivity.Size = new Size(744, 1012);
             tabPage_GraphСonnectivity.TabIndex = 1;
-            tabPage_GraphСonnectivity.Text = "Связность графа";
+            tabPage_GraphСonnectivity.Text = "Связность";
             tabPage_GraphСonnectivity.UseVisualStyleBackColor = true;
             // 
             // panel_Reachability
@@ -418,7 +418,7 @@
             // 
             comboBox_VertexFrom.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_VertexFrom.FormattingEnabled = true;
-            comboBox_VertexFrom.Location = new Point(582, 92);
+            comboBox_VertexFrom.Location = new Point(499, 92);
             comboBox_VertexFrom.Name = "comboBox_VertexFrom";
             comboBox_VertexFrom.Size = new Size(114, 40);
             comboBox_VertexFrom.TabIndex = 12;
@@ -429,11 +429,11 @@
             label_VertexFrom.BackColor = Color.Transparent;
             label_VertexFrom.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label_VertexFrom.ForeColor = SystemColors.ActiveCaptionText;
-            label_VertexFrom.Location = new Point(22, 82);
+            label_VertexFrom.Location = new Point(106, 80);
             label_VertexFrom.Name = "label_VertexFrom";
-            label_VertexFrom.Size = new Size(181, 52);
+            label_VertexFrom.Size = new Size(105, 52);
             label_VertexFrom.TabIndex = 11;
-            label_VertexFrom.Text = "Вершины";
+            label_VertexFrom.Text = "зоны";
             label_VertexFrom.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label_VertexIn
@@ -442,18 +442,18 @@
             label_VertexIn.BackColor = Color.Transparent;
             label_VertexIn.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label_VertexIn.ForeColor = SystemColors.ActiveCaptionText;
-            label_VertexIn.Location = new Point(347, 82);
+            label_VertexIn.Location = new Point(350, 82);
             label_VertexIn.Name = "label_VertexIn";
-            label_VertexIn.Size = new Size(220, 52);
+            label_VertexIn.Size = new Size(153, 52);
             label_VertexIn.TabIndex = 10;
-            label_VertexIn.Text = "из вершины";
+            label_VertexIn.Text = "из зоны";
             label_VertexIn.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // comboBox_VertexIn
             // 
             comboBox_VertexIn.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_VertexIn.FormattingEnabled = true;
-            comboBox_VertexIn.Location = new Point(209, 92);
+            comboBox_VertexIn.Location = new Point(230, 92);
             comboBox_VertexIn.Name = "comboBox_VertexIn";
             comboBox_VertexIn.Size = new Size(114, 40);
             comboBox_VertexIn.TabIndex = 9;
@@ -513,7 +513,7 @@
             label__ConnectivityСomponents.Name = "label__ConnectivityСomponents";
             label__ConnectivityСomponents.Size = new Size(738, 72);
             label__ConnectivityСomponents.TabIndex = 7;
-            label__ConnectivityСomponents.Text = "Компоненты связности графа";
+            label__ConnectivityСomponents.Text = "Экологические ареалы связности";
             label__ConnectivityСomponents.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel_Buttons
@@ -550,6 +550,7 @@
             button_Info.TabIndex = 6;
             button_Info.Text = "Справка пользователя";
             button_Info.UseVisualStyleBackColor = false;
+            button_Info.Click += GetInfo;
             // 
             // panel_Home
             // 

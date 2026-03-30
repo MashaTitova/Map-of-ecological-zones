@@ -4,25 +4,22 @@
     {
         public static bool IsDirected(Dictionary<string, List<Tuple<string, double>>> adjacencyList)
         {
-            // Собираем все рёбра графа
-            var allEdges = new HashSet<(string, string)>(); // ValueTuple вместо Tuple
+            var allEdges = new HashSet<(string, string)>(); 
 
             foreach (var vertex in adjacencyList.Keys)
             {
                 foreach (var neighbor in adjacencyList[vertex])
                 {
                     string neighborName = neighbor.Item1;
-                    allEdges.Add((vertex, neighborName)); // синтаксис ValueTuple
+                    allEdges.Add((vertex, neighborName)); 
                 }
             }
 
-            // Проверяем, есть ли для каждого ребра (A→B) обратное ребро (B→A)
             foreach (var (from, to) in allEdges)
             {
-                if (from == to) continue; // пропускаем петли
+                if (from == to) continue; 
 
-                // Если нет обратного ребра, граф ориентированный
-                if (!allEdges.Contains((to, from))) // ValueTuple сравнивает значения
+                if (!allEdges.Contains((to, from))) 
                     return true;
             }
 
