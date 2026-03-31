@@ -209,6 +209,7 @@ namespace Map_of_ecological_zones
                 comboBox_VertexFrom.Items.Add(vertex);
                 comboBox_ChooseDFS.Items.Add(vertex);
                 comboBox_ChooseBFS.Items.Add(vertex);
+                comboBox_ShortestDistanceObject.Items.Add(vertex);
 
 
                 var neighborsStr = parts[1].Trim(); // Список соседей (например, "E(11) K(8,9) D(4)")
@@ -258,7 +259,7 @@ namespace Map_of_ecological_zones
                             return;
                         }
 
-                            neighborList.Add(Tuple.Create(name, weight));
+                        neighborList.Add(Tuple.Create(name, weight));
                     }
 
                 }
@@ -297,25 +298,43 @@ namespace Map_of_ecological_zones
                     if (tmp.Name == "button_СrawlingАlgorithms")
                     {
                         panel_BypassAlgorithm.Visible = true;
-                        panel_AdjacencyList.Visible = true;
-                        panel_DescriptionOfThePeaks.Visible = true;
-                    }
 
+                    }
+                    if (tmp.Name == "button_DijkstraAlgorithm")
+                    {
+                        panel_DijkstraAlgorithm.Visible = true;
+                    }
+                    panel_AdjacencyList.Visible = true;
+                    panel_DescriptionOfThePeaks.Visible = true;
                     panel_Home.Visible = false;
                     button_Return.Visible = true;
-
                 }
             }
+            
         }
         private void ReturnInMenu_button_Click(object sender, EventArgs e)
         {
             panel_Home.Visible = true;
             button_Return.Visible = false;
+            panel_AdjacencyList.Visible = false;
+            panel_DescriptionOfThePeaks.Visible = false;
             if (panel_BypassAlgorithm.Visible == true)
             {
                 panel_BypassAlgorithm.Visible = false;
-                panel_AdjacencyList.Visible = false;
-                panel_DescriptionOfThePeaks.Visible = false;
+                comboBox_ChooseBFS.Text = "";
+                textBox_OrderBFS.Text = "";
+                comboBox_ChooseDFS.Text = "";
+                textBox_OrderDFS.Text = "";
+            }
+            if (panel_DijkstraAlgorithm.Visible == true)
+            {
+                panel_DijkstraAlgorithm.Visible = false;
+                comboBox_ShortestDistanceObject.Text = "";
+                textBox_ShortestDistance.Text = "";
+                textBox_Route.Text = "";
+                textBox_ShortestPathObject1.Text = "";
+                textBox_ShortestPathObject2.Text = "";
+                textBox_ShortestPath.Text = "";
             }
 
         }
@@ -336,7 +355,7 @@ namespace Map_of_ecological_zones
                 }
                 textBox_OrderBFS.Text = orderStr;
             }
-            if(tmp.Name == "button_DFS")
+            if (tmp.Name == "button_DFS")
             {
                 string orderStr = "";
                 if (comboBox_ChooseDFS.Text != "")
@@ -370,7 +389,7 @@ namespace Map_of_ecological_zones
                     return;
                 }
             }
-            if(tmp.Name == "button_ConnectivityСomponents")
+            if (tmp.Name == "button_ConnectivityСomponents")
             {
                 try
                 {
@@ -387,22 +406,79 @@ namespace Map_of_ecological_zones
                 }
             }
         }
+        private void GetDijkstraAlgorithm(object sender, EventArgs e)
+        {
+            
+            var tmp = (Button)sender;
+            if(tmp.Name == "button_ShortestDistance")
+            {
+                textBox_ShortestDistance.Text = "";
+                textBox_Route.Text = "";
+                if (comboBox_ShortestDistanceObject.Text != "")
+                {
+                    Dictionary<string, double> distances = DijkstraAlgorithm.Dijkstra(comboBox_ShortestDistanceObject.Text, adjacencyList).Item1;
+                    Dictionary<string, string> paths = DijkstraAlgorithm.Dijkstra(comboBox_ShortestDistanceObject.Text, adjacencyList).Item2;
+                    foreach (var entry in distances)
+                    {
+                        if(entry.Value != double.PositiveInfinity && entry.Value != 0)
+                            textBox_ShortestDistance.Text += $"Вершина {entry.Key}: расстояние = {entry.Value} {Environment.NewLine}";
+                        else
+                            if (entry.Value == double.PositiveInfinity)
+                            textBox_ShortestDistance.Text += $"Вершина {entry.Key} недостижима {Environment.NewLine}";
+                    }
+                    foreach (var entry in paths)
+                    {
+                        textBox_Route.Text += $"Вершина {entry.Key}. Путь: {DijkstraAlgorithm.BuildPath(entry.Key, entry.Value, paths)}{Environment.NewLine}";
+                    }
+                }
+            }
+            if(tmp.Name == "button_ShortestPath")
+            {
+                textBox_ShortestPath.Text = "";
+                if (textBox_ShortestPathObject1.Text != "" && textBox_ShortestPathObject2.Text != "")
+                {
+                    Dictionary<string, double> distances = DijkstraAlgorithm.Dijkstra(textBox_ShortestPathObject1.Text.ToUpper(), adjacencyList).Item1;
+                    Dictionary<string, string> paths = DijkstraAlgorithm.Dijkstra(textBox_ShortestPathObject1.Text.ToUpper(), adjacencyList).Item2;
+                    try
+                    {
+                        textBox_ShortestPath.Text = DijkstraAlgorithm.PrintShortestPath(textBox_ShortestPathObject1.Text.ToUpper(), textBox_ShortestPathObject2.Text.ToUpper(), distances, paths);
+                    }
+                    catch (Exception ex)
+                    {
+                        textBox_ShortestPath.Text = ex.Message;
+                    }
+                }
+            }
+        }
         private void GetInfo(object sender, EventArgs e)
         {
-            if(tabControl_BypassAlgorithm.Visible == true)
+            if (tabControl_BypassAlgorithm.Visible == true)
             {
 
                 MessageBox.Show(
-                  "В  данном разделе производится обход карты экологических зон двумя способами (BFS и DFS)," +
+                  "     В  данном разделе производится обход карты экологических зон двумя способами (BFS и DFS)," +
                   " нахождение возможности перехода от одного экологического объекта к другому " +
                   "и определения экологических ареалов связности. \n" +
-                  "В правой части окна можно увидеть исходные данные: описание природных объектов и экологических коридоров. \n" +
-                  "В левой части при выборе раздела \"Алгоритмы обхода\" при нажатии соответствующих кнопок производится обход графа методами BFS и DFS. \n" +
-                  "При выборе раздела \"Связность\" при нажатии соответствующих кнопок производятся нахождение возможности перехода от одного экологического объекта к другому и определение экологических ареалов связности.\n" +
-                  "Для начала работы алгоритмов необходимо выбрать вершину из предложенных и нажать на сообветствующую подразделу кнопку  \"Рассчитать\".\n",
+                  "     В правой части окна можно увидеть исходные данные: описание природных объектов и экологических коридоров. \n" +
+                  "     В левой части при выборе раздела \"Алгоритмы обхода\" при нажатии соответствующих кнопок производится обход графа методами BFS и DFS. \n" +
+                  "     При выборе раздела \"Связность\" при нажатии соответствующих кнопок производятся нахождение возможности перехода от одного экологического объекта к другому и определение экологических ареалов связности.\n" +
+                  "     Для начала работы алгоритмов необходимо выбрать вершину из предложенных и нажать на соответствующую подразделу кнопку  \"Рассчитать\".\n",
                   "Справка пользователя",
                   MessageBoxButtons.OK,
                   MessageBoxIcon.Asterisk);
+            }
+            if (tabControl_DijkstraAlgorithm.Visible == true)
+            {
+                MessageBox.Show(
+                 "      В  данном разделе производится нахождение кратчайшего пути между двумя вершинами алгоритмом Дейкстры.\n" +
+                 "      в правой части окна можно увидеть исходные данные: описание природных объектов и экологических коридоров. \n" +
+                 "      В левой части в подразделе \"Кратчайшее расстояние\" нужно выбрать начальный объект из предложенных.\n" +
+                 "      После нажатии соответствующей кнопки \"Рассчитать\" в поле \"Кратчайшее расстояние\" появится кратчайшее расстояние от исходного объекта до кождого из остальных объектов," +
+                 "в поле \"Маршрут\" выводится кратчайший маршрут до каждого объекта.\n" +
+                 "      В подразделе  \"Кратчайший путь\" нужно ввести начальный и конечный объекты, при нажатии  соответствующей кнопки \"Рассчитать\" выводится кратчайший путь от начального объекта до конечного.\n",
+                 "Справка пользователя",
+                 MessageBoxButtons.OK,
+                 MessageBoxIcon.Asterisk);
             }
         }
     }
