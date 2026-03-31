@@ -72,11 +72,31 @@
             panel_HomeButtons = new Panel();
             button_LoadFile = new Button();
             button_СrawlingАlgorithms = new Button();
-            button_DextraAlgorithm = new Button();
+            button_DijkstraAlgorithm = new Button();
             button_DepthAnalysis = new Button();
             button_ExitApp = new Button();
             label_NameApp = new Label();
             label_TaskApp = new Label();
+            panel_DijkstraAlgorithm = new Panel();
+            tabControl_DijkstraAlgorithm = new TabControl();
+            tabPage_DijkstraAlgorithm = new TabPage();
+            panel_ShortestPath = new Panel();
+            textBox_ShortestPath = new TextBox();
+            textBox_ShortestPathObject2 = new TextBox();
+            textBox_ShortestPathObject1 = new TextBox();
+            label_ShortestPathObject1 = new Label();
+            label_ShortestPathObject2 = new Label();
+            button_ShortestPath = new Button();
+            label_ShortestPath = new Label();
+            panel_ShortestDistance = new Panel();
+            textBox_Route = new TextBox();
+            label_Route = new Label();
+            comboBox_ShortestDistanceObject = new ComboBox();
+            label_ShortestDistanceObject = new Label();
+            button_ShortestDistance = new Button();
+            label_ShortestDistanceObjects = new Label();
+            textBox_ShortestDistance = new TextBox();
+            label_ShortestDistance = new Label();
             panel_DescriptionOfThePeaks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView_DescriptionOfThePeaks).BeginInit();
             panel_AdjacencyList.SuspendLayout();
@@ -91,6 +111,11 @@
             panel_Buttons.SuspendLayout();
             panel_Home.SuspendLayout();
             panel_HomeButtons.SuspendLayout();
+            panel_DijkstraAlgorithm.SuspendLayout();
+            tabControl_DijkstraAlgorithm.SuspendLayout();
+            tabPage_DijkstraAlgorithm.SuspendLayout();
+            panel_ShortestPath.SuspendLayout();
+            panel_ShortestDistance.SuspendLayout();
             SuspendLayout();
             // 
             // panel_DescriptionOfThePeaks
@@ -232,7 +257,7 @@
             label_ChooseDFS.Name = "label_ChooseDFS";
             label_ChooseDFS.Size = new Size(558, 50);
             label_ChooseDFS.TabIndex = 11;
-            label_ChooseDFS.Text = "Выберете начальную зону";
+            label_ChooseDFS.Text = "Выберете начальный объект";
             label_ChooseDFS.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button_DFS
@@ -256,7 +281,7 @@
             label_OrderDFS.Name = "label_OrderDFS";
             label_OrderDFS.Size = new Size(738, 50);
             label_OrderDFS.TabIndex = 6;
-            label_OrderDFS.Text = "Порядок посещения экологических зон";
+            label_OrderDFS.Text = "Порядок посещения природных объектов";
             label_OrderDFS.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // textBox_OrderDFS
@@ -315,7 +340,7 @@
             label_ChooseBFS.Name = "label_ChooseBFS";
             label_ChooseBFS.Size = new Size(561, 50);
             label_ChooseBFS.TabIndex = 6;
-            label_ChooseBFS.Text = "Выберете начальную зону";
+            label_ChooseBFS.Text = "Выберете начальный объект";
             label_ChooseBFS.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button_BFS
@@ -340,7 +365,7 @@
             label_OrderBFS.Name = "label_OrderBFS";
             label_OrderBFS.Size = new Size(738, 50);
             label_OrderBFS.TabIndex = 4;
-            label_OrderBFS.Text = "Порядок посещения экологических зон";
+            label_OrderBFS.Text = "Порядок посещения природных объектов";
             label_OrderBFS.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // textBox_OrderBFS
@@ -390,7 +415,7 @@
             panel_Reachability.Controls.Add(label_Reachability);
             panel_Reachability.Location = new Point(2, 3);
             panel_Reachability.Name = "panel_Reachability";
-            panel_Reachability.Size = new Size(738, 505);
+            panel_Reachability.Size = new Size(735, 505);
             panel_Reachability.TabIndex = 3;
             // 
             // button_Reachability
@@ -411,14 +436,14 @@
             textBox_Reachability.Multiline = true;
             textBox_Reachability.Name = "textBox_Reachability";
             textBox_Reachability.ReadOnly = true;
-            textBox_Reachability.Size = new Size(732, 243);
+            textBox_Reachability.Size = new Size(729, 243);
             textBox_Reachability.TabIndex = 13;
             // 
             // comboBox_VertexFrom
             // 
             comboBox_VertexFrom.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_VertexFrom.FormattingEnabled = true;
-            comboBox_VertexFrom.Location = new Point(499, 92);
+            comboBox_VertexFrom.Location = new Point(585, 94);
             comboBox_VertexFrom.Name = "comboBox_VertexFrom";
             comboBox_VertexFrom.Size = new Size(114, 40);
             comboBox_VertexFrom.TabIndex = 12;
@@ -429,11 +454,11 @@
             label_VertexFrom.BackColor = Color.Transparent;
             label_VertexFrom.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label_VertexFrom.ForeColor = SystemColors.ActiveCaptionText;
-            label_VertexFrom.Location = new Point(106, 80);
+            label_VertexFrom.Location = new Point(59, 82);
             label_VertexFrom.Name = "label_VertexFrom";
-            label_VertexFrom.Size = new Size(105, 52);
+            label_VertexFrom.Size = new Size(160, 52);
             label_VertexFrom.TabIndex = 11;
-            label_VertexFrom.Text = "зоны";
+            label_VertexFrom.Text = "объекта";
             label_VertexFrom.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label_VertexIn
@@ -442,18 +467,18 @@
             label_VertexIn.BackColor = Color.Transparent;
             label_VertexIn.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label_VertexIn.ForeColor = SystemColors.ActiveCaptionText;
-            label_VertexIn.Location = new Point(350, 82);
+            label_VertexIn.Location = new Point(360, 84);
             label_VertexIn.Name = "label_VertexIn";
-            label_VertexIn.Size = new Size(153, 52);
+            label_VertexIn.Size = new Size(203, 52);
             label_VertexIn.TabIndex = 10;
-            label_VertexIn.Text = "из зоны";
+            label_VertexIn.Text = "из объекта";
             label_VertexIn.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // comboBox_VertexIn
             // 
             comboBox_VertexIn.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_VertexIn.FormattingEnabled = true;
-            comboBox_VertexIn.Location = new Point(230, 92);
+            comboBox_VertexIn.Location = new Point(231, 92);
             comboBox_VertexIn.Name = "comboBox_VertexIn";
             comboBox_VertexIn.Size = new Size(114, 40);
             comboBox_VertexIn.TabIndex = 9;
@@ -466,7 +491,7 @@
             label_Reachability.ForeColor = SystemColors.ActiveCaptionText;
             label_Reachability.Location = new Point(0, 0);
             label_Reachability.Name = "label_Reachability";
-            label_Reachability.Size = new Size(738, 72);
+            label_Reachability.Size = new Size(735, 72);
             label_Reachability.TabIndex = 8;
             label_Reachability.Text = "Достижимость";
             label_Reachability.TextAlign = ContentAlignment.MiddleCenter;
@@ -479,7 +504,7 @@
             panel_ConnectivityСomponents.Controls.Add(label__ConnectivityСomponents);
             panel_ConnectivityСomponents.Location = new Point(3, 508);
             panel_ConnectivityСomponents.Name = "panel_ConnectivityСomponents";
-            panel_ConnectivityСomponents.Size = new Size(738, 498);
+            panel_ConnectivityСomponents.Size = new Size(735, 498);
             panel_ConnectivityСomponents.TabIndex = 2;
             // 
             // button_ConnectivityСomponents
@@ -496,7 +521,7 @@
             // textBox_ConnectivityСomponents
             // 
             textBox_ConnectivityСomponents.Anchor = AnchorStyles.None;
-            textBox_ConnectivityСomponents.Location = new Point(8, 75);
+            textBox_ConnectivityСomponents.Location = new Point(6, 75);
             textBox_ConnectivityСomponents.Multiline = true;
             textBox_ConnectivityСomponents.Name = "textBox_ConnectivityСomponents";
             textBox_ConnectivityСomponents.ReadOnly = true;
@@ -509,7 +534,7 @@
             label__ConnectivityСomponents.BackColor = Color.Transparent;
             label__ConnectivityСomponents.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label__ConnectivityСomponents.ForeColor = SystemColors.ActiveCaptionText;
-            label__ConnectivityСomponents.Location = new Point(-1, 0);
+            label__ConnectivityСomponents.Location = new Point(-4, 0);
             label__ConnectivityСomponents.Name = "label__ConnectivityСomponents";
             label__ConnectivityСomponents.Size = new Size(738, 72);
             label__ConnectivityСomponents.TabIndex = 7;
@@ -569,7 +594,7 @@
             panel_HomeButtons.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel_HomeButtons.Controls.Add(button_LoadFile);
             panel_HomeButtons.Controls.Add(button_СrawlingАlgorithms);
-            panel_HomeButtons.Controls.Add(button_DextraAlgorithm);
+            panel_HomeButtons.Controls.Add(button_DijkstraAlgorithm);
             panel_HomeButtons.Controls.Add(button_DepthAnalysis);
             panel_HomeButtons.Controls.Add(button_ExitApp);
             panel_HomeButtons.Location = new Point(434, 285);
@@ -607,19 +632,19 @@
             button_СrawlingАlgorithms.UseVisualStyleBackColor = false;
             button_СrawlingАlgorithms.Click += Home_button_Click;
             // 
-            // button_DextraAlgorithm
+            // button_DijkstraAlgorithm
             // 
-            button_DextraAlgorithm.Anchor = AnchorStyles.None;
-            button_DextraAlgorithm.AutoSize = true;
-            button_DextraAlgorithm.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            button_DextraAlgorithm.Location = new Point(18, 259);
-            button_DextraAlgorithm.Margin = new Padding(4, 2, 4, 2);
-            button_DextraAlgorithm.Name = "button_DextraAlgorithm";
-            button_DextraAlgorithm.Size = new Size(546, 90);
-            button_DextraAlgorithm.TabIndex = 14;
-            button_DextraAlgorithm.Text = "Алгоритм Дейкстры";
-            button_DextraAlgorithm.UseVisualStyleBackColor = true;
-            button_DextraAlgorithm.Click += Home_button_Click;
+            button_DijkstraAlgorithm.Anchor = AnchorStyles.None;
+            button_DijkstraAlgorithm.AutoSize = true;
+            button_DijkstraAlgorithm.Font = new Font("Calibri", 12F, FontStyle.Bold);
+            button_DijkstraAlgorithm.Location = new Point(18, 259);
+            button_DijkstraAlgorithm.Margin = new Padding(4, 2, 4, 2);
+            button_DijkstraAlgorithm.Name = "button_DijkstraAlgorithm";
+            button_DijkstraAlgorithm.Size = new Size(546, 90);
+            button_DijkstraAlgorithm.TabIndex = 14;
+            button_DijkstraAlgorithm.Text = "Алгоритм Дейкстры";
+            button_DijkstraAlgorithm.UseVisualStyleBackColor = true;
+            button_DijkstraAlgorithm.Click += Home_button_Click;
             // 
             // button_DepthAnalysis
             // 
@@ -670,6 +695,240 @@
             label_TaskApp.TabIndex = 13;
             label_TaskApp.Text = "Маршрут миграции животных между зонами";
             // 
+            // panel_DijkstraAlgorithm
+            // 
+            panel_DijkstraAlgorithm.BackColor = Color.Transparent;
+            panel_DijkstraAlgorithm.Controls.Add(tabControl_DijkstraAlgorithm);
+            panel_DijkstraAlgorithm.Location = new Point(6, 15);
+            panel_DijkstraAlgorithm.Name = "panel_DijkstraAlgorithm";
+            panel_DijkstraAlgorithm.Size = new Size(755, 1069);
+            panel_DijkstraAlgorithm.TabIndex = 5;
+            panel_DijkstraAlgorithm.Visible = false;
+            // 
+            // tabControl_DijkstraAlgorithm
+            // 
+            tabControl_DijkstraAlgorithm.Controls.Add(tabPage_DijkstraAlgorithm);
+            tabControl_DijkstraAlgorithm.Dock = DockStyle.Fill;
+            tabControl_DijkstraAlgorithm.Location = new Point(0, 0);
+            tabControl_DijkstraAlgorithm.Name = "tabControl_DijkstraAlgorithm";
+            tabControl_DijkstraAlgorithm.SelectedIndex = 0;
+            tabControl_DijkstraAlgorithm.Size = new Size(755, 1069);
+            tabControl_DijkstraAlgorithm.TabIndex = 3;
+            // 
+            // tabPage_DijkstraAlgorithm
+            // 
+            tabPage_DijkstraAlgorithm.Controls.Add(panel_ShortestPath);
+            tabPage_DijkstraAlgorithm.Controls.Add(panel_ShortestDistance);
+            tabPage_DijkstraAlgorithm.Location = new Point(8, 46);
+            tabPage_DijkstraAlgorithm.Name = "tabPage_DijkstraAlgorithm";
+            tabPage_DijkstraAlgorithm.Padding = new Padding(3);
+            tabPage_DijkstraAlgorithm.Size = new Size(739, 1015);
+            tabPage_DijkstraAlgorithm.TabIndex = 0;
+            tabPage_DijkstraAlgorithm.Text = "Алгоритм Дейкстры";
+            tabPage_DijkstraAlgorithm.UseVisualStyleBackColor = true;
+            // 
+            // panel_ShortestPath
+            // 
+            panel_ShortestPath.Controls.Add(textBox_ShortestPath);
+            panel_ShortestPath.Controls.Add(textBox_ShortestPathObject2);
+            panel_ShortestPath.Controls.Add(textBox_ShortestPathObject1);
+            panel_ShortestPath.Controls.Add(label_ShortestPathObject1);
+            panel_ShortestPath.Controls.Add(label_ShortestPathObject2);
+            panel_ShortestPath.Controls.Add(button_ShortestPath);
+            panel_ShortestPath.Controls.Add(label_ShortestPath);
+            panel_ShortestPath.Location = new Point(2, 661);
+            panel_ShortestPath.Name = "panel_ShortestPath";
+            panel_ShortestPath.Size = new Size(741, 348);
+            panel_ShortestPath.TabIndex = 3;
+            // 
+            // textBox_ShortestPath
+            // 
+            textBox_ShortestPath.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBox_ShortestPath.Location = new Point(3, 141);
+            textBox_ShortestPath.Multiline = true;
+            textBox_ShortestPath.Name = "textBox_ShortestPath";
+            textBox_ShortestPath.ReadOnly = true;
+            textBox_ShortestPath.Size = new Size(735, 97);
+            textBox_ShortestPath.TabIndex = 17;
+            // 
+            // textBox_ShortestPathObject2
+            // 
+            textBox_ShortestPathObject2.Location = new Point(574, 89);
+            textBox_ShortestPathObject2.Name = "textBox_ShortestPathObject2";
+            textBox_ShortestPathObject2.Size = new Size(147, 39);
+            textBox_ShortestPathObject2.TabIndex = 16;
+            // 
+            // textBox_ShortestPathObject1
+            // 
+            textBox_ShortestPathObject1.Location = new Point(212, 89);
+            textBox_ShortestPathObject1.Name = "textBox_ShortestPathObject1";
+            textBox_ShortestPathObject1.Size = new Size(147, 39);
+            textBox_ShortestPathObject1.TabIndex = 15;
+            // 
+            // label_ShortestPathObject1
+            // 
+            label_ShortestPathObject1.Anchor = AnchorStyles.Top;
+            label_ShortestPathObject1.BackColor = Color.Transparent;
+            label_ShortestPathObject1.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label_ShortestPathObject1.ForeColor = SystemColors.ActiveCaptionText;
+            label_ShortestPathObject1.Location = new Point(9, 80);
+            label_ShortestPathObject1.Name = "label_ShortestPathObject1";
+            label_ShortestPathObject1.Size = new Size(207, 50);
+            label_ShortestPathObject1.TabIndex = 14;
+            label_ShortestPathObject1.Text = "от объекта";
+            label_ShortestPathObject1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label_ShortestPathObject2
+            // 
+            label_ShortestPathObject2.Anchor = AnchorStyles.Top;
+            label_ShortestPathObject2.BackColor = Color.Transparent;
+            label_ShortestPathObject2.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label_ShortestPathObject2.ForeColor = SystemColors.ActiveCaptionText;
+            label_ShortestPathObject2.Location = new Point(365, 80);
+            label_ShortestPathObject2.Name = "label_ShortestPathObject2";
+            label_ShortestPathObject2.Size = new Size(216, 50);
+            label_ShortestPathObject2.TabIndex = 13;
+            label_ShortestPathObject2.Text = "до объекта";
+            label_ShortestPathObject2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button_ShortestPath
+            // 
+            button_ShortestPath.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            button_ShortestPath.Font = new Font("Segoe UI", 9F);
+            button_ShortestPath.Location = new Point(4, 244);
+            button_ShortestPath.Name = "button_ShortestPath";
+            button_ShortestPath.Size = new Size(210, 104);
+            button_ShortestPath.TabIndex = 10;
+            button_ShortestPath.Text = "Рассчитать";
+            button_ShortestPath.UseVisualStyleBackColor = true;
+            button_ShortestPath.Click += GetDijkstraAlgorithm;
+            // 
+            // label_ShortestPath
+            // 
+            label_ShortestPath.Anchor = AnchorStyles.Top;
+            label_ShortestPath.BackColor = Color.Transparent;
+            label_ShortestPath.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label_ShortestPath.ForeColor = SystemColors.ActiveCaptionText;
+            label_ShortestPath.Location = new Point(-4, 15);
+            label_ShortestPath.Name = "label_ShortestPath";
+            label_ShortestPath.Size = new Size(738, 45);
+            label_ShortestPath.TabIndex = 7;
+            label_ShortestPath.Text = "Кратчайший путь";
+            label_ShortestPath.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panel_ShortestDistance
+            // 
+            panel_ShortestDistance.Anchor = AnchorStyles.Top;
+            panel_ShortestDistance.BackColor = Color.Transparent;
+            panel_ShortestDistance.Controls.Add(textBox_Route);
+            panel_ShortestDistance.Controls.Add(label_Route);
+            panel_ShortestDistance.Controls.Add(comboBox_ShortestDistanceObject);
+            panel_ShortestDistance.Controls.Add(label_ShortestDistanceObject);
+            panel_ShortestDistance.Controls.Add(button_ShortestDistance);
+            panel_ShortestDistance.Controls.Add(label_ShortestDistanceObjects);
+            panel_ShortestDistance.Controls.Add(textBox_ShortestDistance);
+            panel_ShortestDistance.Controls.Add(label_ShortestDistance);
+            panel_ShortestDistance.Location = new Point(3, 3);
+            panel_ShortestDistance.Name = "panel_ShortestDistance";
+            panel_ShortestDistance.Size = new Size(741, 652);
+            panel_ShortestDistance.TabIndex = 2;
+            // 
+            // textBox_Route
+            // 
+            textBox_Route.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBox_Route.Location = new Point(2, 345);
+            textBox_Route.Multiline = true;
+            textBox_Route.Name = "textBox_Route";
+            textBox_Route.ReadOnly = true;
+            textBox_Route.ScrollBars = ScrollBars.Vertical;
+            textBox_Route.Size = new Size(731, 185);
+            textBox_Route.TabIndex = 14;
+            // 
+            // label_Route
+            // 
+            label_Route.Anchor = AnchorStyles.Left;
+            label_Route.BackColor = Color.Transparent;
+            label_Route.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label_Route.ForeColor = SystemColors.ActiveCaptionText;
+            label_Route.Location = new Point(0, 297);
+            label_Route.Name = "label_Route";
+            label_Route.Size = new Size(738, 45);
+            label_Route.TabIndex = 13;
+            label_Route.Text = "Маршрут";
+            label_Route.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // comboBox_ShortestDistanceObject
+            // 
+            comboBox_ShortestDistanceObject.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_ShortestDistanceObject.FormattingEnabled = true;
+            comboBox_ShortestDistanceObject.Location = new Point(211, 66);
+            comboBox_ShortestDistanceObject.Name = "comboBox_ShortestDistanceObject";
+            comboBox_ShortestDistanceObject.Size = new Size(114, 40);
+            comboBox_ShortestDistanceObject.TabIndex = 12;
+            // 
+            // label_ShortestDistanceObject
+            // 
+            label_ShortestDistanceObject.Anchor = AnchorStyles.Top;
+            label_ShortestDistanceObject.BackColor = Color.Transparent;
+            label_ShortestDistanceObject.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label_ShortestDistanceObject.ForeColor = SystemColors.ActiveCaptionText;
+            label_ShortestDistanceObject.Location = new Point(6, 58);
+            label_ShortestDistanceObject.Name = "label_ShortestDistanceObject";
+            label_ShortestDistanceObject.Size = new Size(207, 50);
+            label_ShortestDistanceObject.TabIndex = 11;
+            label_ShortestDistanceObject.Text = "от объекта";
+            label_ShortestDistanceObject.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button_ShortestDistance
+            // 
+            button_ShortestDistance.Anchor = AnchorStyles.None;
+            button_ShortestDistance.BackColor = Color.Transparent;
+            button_ShortestDistance.Font = new Font("Segoe UI", 9F);
+            button_ShortestDistance.Location = new Point(2, 536);
+            button_ShortestDistance.Name = "button_ShortestDistance";
+            button_ShortestDistance.Size = new Size(210, 104);
+            button_ShortestDistance.TabIndex = 10;
+            button_ShortestDistance.Text = "Рассчитать";
+            button_ShortestDistance.UseVisualStyleBackColor = false;
+            button_ShortestDistance.Click += GetDijkstraAlgorithm;
+            // 
+            // label_ShortestDistanceObjects
+            // 
+            label_ShortestDistanceObjects.Anchor = AnchorStyles.Top;
+            label_ShortestDistanceObjects.BackColor = Color.Transparent;
+            label_ShortestDistanceObjects.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label_ShortestDistanceObjects.ForeColor = SystemColors.ActiveCaptionText;
+            label_ShortestDistanceObjects.Location = new Point(331, 56);
+            label_ShortestDistanceObjects.Name = "label_ShortestDistanceObjects";
+            label_ShortestDistanceObjects.Size = new Size(403, 50);
+            label_ShortestDistanceObjects.TabIndex = 9;
+            label_ShortestDistanceObjects.Text = "до остальных объектов";
+            label_ShortestDistanceObjects.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // textBox_ShortestDistance
+            // 
+            textBox_ShortestDistance.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBox_ShortestDistance.Location = new Point(5, 110);
+            textBox_ShortestDistance.Multiline = true;
+            textBox_ShortestDistance.Name = "textBox_ShortestDistance";
+            textBox_ShortestDistance.ReadOnly = true;
+            textBox_ShortestDistance.ScrollBars = ScrollBars.Vertical;
+            textBox_ShortestDistance.Size = new Size(725, 189);
+            textBox_ShortestDistance.TabIndex = 8;
+            // 
+            // label_ShortestDistance
+            // 
+            label_ShortestDistance.Anchor = AnchorStyles.Top;
+            label_ShortestDistance.BackColor = Color.Transparent;
+            label_ShortestDistance.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label_ShortestDistance.ForeColor = SystemColors.ActiveCaptionText;
+            label_ShortestDistance.Location = new Point(0, -4);
+            label_ShortestDistance.Name = "label_ShortestDistance";
+            label_ShortestDistance.Size = new Size(738, 45);
+            label_ShortestDistance.TabIndex = 7;
+            label_ShortestDistance.Text = "Кратчайшее расстояние ";
+            label_ShortestDistance.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Form_MapOfEcologicalZones
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -677,8 +936,9 @@
             BackColor = SystemColors.Control;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1453, 1230);
-            Controls.Add(panel_Buttons);
+            Controls.Add(panel_DijkstraAlgorithm);
             Controls.Add(panel_BypassAlgorithm);
+            Controls.Add(panel_Buttons);
             Controls.Add(panel_AdjacencyList);
             Controls.Add(panel_DescriptionOfThePeaks);
             Controls.Add(panel_Home);
@@ -704,6 +964,13 @@
             panel_Home.ResumeLayout(false);
             panel_HomeButtons.ResumeLayout(false);
             panel_HomeButtons.PerformLayout();
+            panel_DijkstraAlgorithm.ResumeLayout(false);
+            tabControl_DijkstraAlgorithm.ResumeLayout(false);
+            tabPage_DijkstraAlgorithm.ResumeLayout(false);
+            panel_ShortestPath.ResumeLayout(false);
+            panel_ShortestPath.PerformLayout();
+            panel_ShortestDistance.ResumeLayout(false);
+            panel_ShortestDistance.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -748,7 +1015,7 @@
         private Panel panel_HomeButtons;
         private Button button_LoadFile;
         private Button button_СrawlingАlgorithms;
-        private Button button_DextraAlgorithm;
+        private Button button_DijkstraAlgorithm;
         private Button button_DepthAnalysis;
         private Button button_ExitApp;
         private TextBox textBox_AdjacencyList;
@@ -757,5 +1024,26 @@
         private ComboBox comboBox_ChooseBFS;
         private ComboBox comboBox_ChooseDFS;
         private Label label_ChooseDFS;
+        private Panel panel_DijkstraAlgorithm;
+        private TabControl tabControl_DijkstraAlgorithm;
+        private TabPage tabPage_DijkstraAlgorithm;
+        private Panel panel_ShortestPath;
+        private Panel panel_ShortestDistance;
+        private Button button_ShortestPath;
+        private Label label5;
+        private Label label_ShortestPath;
+        private Label label_ShortestDistanceObject;
+        private Button button_ShortestDistance;
+        private Label label_ShortestDistanceObjects;
+        private TextBox textBox_ShortestDistance;
+        private Label label_ShortestDistance;
+        private Label label_ShortestPathObject1;
+        private Label label_ShortestPathObject2;
+        private Label label_Route;
+        private ComboBox comboBox_ShortestDistanceObject;
+        private TextBox textBox_ShortestPathObject1;
+        private TextBox textBox_ShortestPathObject2;
+        private TextBox textBox_ShortestPath;
+        private TextBox textBox_Route;
     }
 }
