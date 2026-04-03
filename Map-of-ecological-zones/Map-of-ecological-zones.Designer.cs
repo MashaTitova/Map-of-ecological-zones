@@ -97,6 +97,23 @@
             label_ShortestDistanceObjects = new Label();
             textBox_ShortestDistance = new TextBox();
             label_ShortestDistance = new Label();
+            panel1 = new Panel();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
+            panel4 = new Panel();
+            textBox2 = new TextBox();
+            label2 = new Label();
+            button2 = new Button();
+            panel2 = new Panel();
+            button1 = new Button();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            tabPage2 = new TabPage();
+            panel3 = new Panel();
+            button4 = new Button();
+            textBox3 = new TextBox();
+            label3 = new Label();
+            button3 = new Button();
             panel_DescriptionOfThePeaks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView_DescriptionOfThePeaks).BeginInit();
             panel_AdjacencyList.SuspendLayout();
@@ -116,6 +133,13 @@
             tabPage_DijkstraAlgorithm.SuspendLayout();
             panel_ShortestPath.SuspendLayout();
             panel_ShortestDistance.SuspendLayout();
+            panel1.SuspendLayout();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            panel4.SuspendLayout();
+            panel2.SuspendLayout();
+            tabPage2.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel_DescriptionOfThePeaks
@@ -929,6 +953,189 @@
             label_ShortestDistance.Text = "Кратчайшее расстояние ";
             label_ShortestDistance.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(tabControl1);
+            panel1.Location = new Point(12, 15);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(746, 1066);
+            panel1.TabIndex = 6;
+            // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Dock = DockStyle.Fill;
+            tabControl1.Location = new Point(0, 0);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(746, 1066);
+            tabControl1.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(panel4);
+            tabPage1.Controls.Add(panel2);
+            tabPage1.Location = new Point(8, 46);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(730, 1012);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "tabPage1";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(textBox2);
+            panel4.Controls.Add(label2);
+            panel4.Controls.Add(button2);
+            panel4.Location = new Point(4, 514);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(730, 498);
+            panel4.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(1, 45);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.Size = new Size(722, 332);
+            textBox2.TabIndex = 13;
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Top;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label2.ForeColor = SystemColors.ActiveCaptionText;
+            label2.Location = new Point(-6, -3);
+            label2.Name = "label2";
+            label2.Size = new Size(738, 45);
+            label2.TabIndex = 12;
+            label2.Text = "Ребра минимального остовного дерева";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            button2.BackColor = Color.Transparent;
+            button2.Location = new Point(9, 383);
+            button2.Name = "button2";
+            button2.Size = new Size(210, 104);
+            button2.TabIndex = 11;
+            button2.Text = "Вывести";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(label1);
+            panel2.Location = new Point(0, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(730, 502);
+            panel2.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            button1.BackColor = Color.Transparent;
+            button1.Location = new Point(9, 390);
+            button1.Name = "button1";
+            button1.Size = new Size(210, 104);
+            button1.TabIndex = 10;
+            button1.Text = "Найти";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(5, 48);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(722, 336);
+            textBox1.TabIndex = 9;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Location = new Point(-3, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(738, 45);
+            label1.TabIndex = 8;
+            label1.Text = "Точки сочленения графа";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(panel3);
+            tabPage2.Location = new Point(8, 46);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(730, 1012);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "tabPage2";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(button4);
+            panel3.Controls.Add(textBox3);
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(button3);
+            panel3.Location = new Point(3, 6);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(730, 1000);
+            panel3.TabIndex = 2;
+            // 
+            // button4
+            // 
+            button4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            button4.BackColor = Color.Transparent;
+            button4.Location = new Point(6, 893);
+            button4.Name = "button4";
+            button4.Size = new Size(210, 104);
+            button4.TabIndex = 16;
+            button4.Text = "Рассчитать";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(-2, 106);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new Size(722, 787);
+            textBox3.TabIndex = 15;
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Top;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Calibri", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
+            label3.Location = new Point(-8, -6);
+            label3.Name = "label3";
+            label3.Size = new Size(738, 104);
+            label3.TabIndex = 14;
+            label3.Text = "Маршрут миграции животных между зонами";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button3
+            // 
+            button3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            button3.BackColor = Color.Transparent;
+            button3.Location = new Point(6, 1164);
+            button3.Name = "button3";
+            button3.Size = new Size(210, 104);
+            button3.TabIndex = 11;
+            button3.Text = "Справка пользователя";
+            button3.UseVisualStyleBackColor = false;
+            // 
             // Form_MapOfEcologicalZones
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -942,6 +1149,7 @@
             Controls.Add(panel_AdjacencyList);
             Controls.Add(panel_DescriptionOfThePeaks);
             Controls.Add(panel_Home);
+            Controls.Add(panel1);
             Name = "Form_MapOfEcologicalZones";
             Text = "Карта экологических зон";
             panel_DescriptionOfThePeaks.ResumeLayout(false);
@@ -971,6 +1179,16 @@
             panel_ShortestPath.PerformLayout();
             panel_ShortestDistance.ResumeLayout(false);
             panel_ShortestDistance.PerformLayout();
+            panel1.ResumeLayout(false);
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1045,5 +1263,22 @@
         private TextBox textBox_ShortestPathObject2;
         private TextBox textBox_ShortestPath;
         private TextBox textBox_Route;
+        private Panel panel1;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
+        private Panel panel4;
+        private Panel panel2;
+        private Button button1;
+        private TextBox textBox1;
+        private Label label1;
+        private TextBox textBox2;
+        private Label label2;
+        private Button button2;
+        private Panel panel3;
+        private TextBox textBox3;
+        private Label label3;
+        private Button button3;
+        private Button button4;
     }
 }
