@@ -14,7 +14,6 @@ namespace CrawlingAlgorithmsTest
 
         private void GetAdjacencyList()
         {
-            // Заполняем граф (как в исходном коде)
             adjacencyList.Add("A", new List<Tuple<string, double>>
             {
                 Tuple.Create("B", 3.0),
