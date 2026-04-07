@@ -67,7 +67,7 @@ namespace WorkWithGraphsClassLibrary
         }
 
                 // Вспомогательный метод для построения пути от начальной вершины до заданной
-        public static string BuildPath(string start, string end, Dictionary<string, string> previous, Dictionary<string, double> distances)
+        public static string BuildPath(string start, string end, Dictionary<string, string> previous)
         {
             var path = new List<string>();
             string current = end;
@@ -77,7 +77,6 @@ namespace WorkWithGraphsClassLibrary
                 path.Add(current);
                 current = previous.ContainsKey(current) ? previous[current] : null;
             }
-
             path.Reverse();
             return string.Join(" -> ", path);
         }
@@ -103,7 +102,7 @@ namespace WorkWithGraphsClassLibrary
             }
 
             // Восстанавливаем путь
-            var path = BuildPath(start, end, paths, distances);
+            var path = BuildPath(start, end, paths);
 
             return path;
         }
