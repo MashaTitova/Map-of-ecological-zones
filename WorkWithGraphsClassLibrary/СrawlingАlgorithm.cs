@@ -1,6 +1,6 @@
 ﻿namespace WorkWithGraphsClassLibrary
 {
-    public class СrawlingАlgorithms
+    public class СrawlingАlgorithm
     {
         public static bool IsDirected(Dictionary<string, List<Tuple<string, double>>> adjacencyList)
         {

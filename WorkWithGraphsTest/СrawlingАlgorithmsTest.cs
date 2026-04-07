@@ -43,25 +43,25 @@ namespace CrawlingAlgorithmsTest
         [Fact]
         public void IsDirected_NotDirectedGraph_ReturnsFalse()
         {
-            Assert.False(СrawlingАlgorithms.IsDirected(adjacencyList));
+            Assert.False(СrawlingАlgorithm.IsDirected(adjacencyList));
         }
         [Fact]
         public void IsReachable_OneVertex_ThrowExeption()
         {
             var exception = Assert.Throws<ArgumentException>(
-                () => СrawlingАlgorithms.IsReachable("A", "A", adjacencyList));
+                () => СrawlingАlgorithm.IsReachable("A", "A", adjacencyList));
 
             Assert.Equal("Начальная вершина равна конечной", exception.Message);
         }
         [Fact]
         public void IsReachable_ReachableVertexes_ReturnsTrue()
         {
-            Assert.True(СrawlingАlgorithms.IsReachable("D", "B", adjacencyList));
+            Assert.True(СrawlingАlgorithm.IsReachable("D", "B", adjacencyList));
         }
         [Fact]
         public void GetConnectedComponents_OneComponent()
         {
-            List<List<string>> component = СrawlingАlgorithms.GetConnectedComponents(adjacencyList);
+            List<List<string>> component = СrawlingАlgorithm.GetConnectedComponents(adjacencyList);
             Assert.Equal(1, component.Count);
         }
         [Fact]
@@ -70,7 +70,7 @@ namespace CrawlingAlgorithmsTest
             adjacencyList.Add("F", new List<Tuple<string, double>>
             {
             });
-            Assert.False(СrawlingАlgorithms.IsReachable("F", "B", adjacencyList));
+            Assert.False(СrawlingАlgorithm.IsReachable("F", "B", adjacencyList));
         }
         [Fact]
         public void GetConnectedComponents_TwoComponents()
@@ -78,7 +78,7 @@ namespace CrawlingAlgorithmsTest
             adjacencyList.Add("F", new List<Tuple<string, double>>
             {
             });
-            List<List<string>> components = СrawlingАlgorithms.GetConnectedComponents(adjacencyList);
+            List<List<string>> components = СrawlingАlgorithm.GetConnectedComponents(adjacencyList);
             Assert.Equal(2, components.Count);
         }
         [Fact]
@@ -89,7 +89,7 @@ namespace CrawlingAlgorithmsTest
                 Tuple.Create("B", 2.6),
                 Tuple.Create("C", 1.0)
             });
-            Assert.True(СrawlingАlgorithms.IsDirected(adjacencyList));
+            Assert.True(СrawlingАlgorithm.IsDirected(adjacencyList));
         }
         [Fact]
         public void GetConnectedComponents_DirectedGraph_ThrowException()
@@ -100,7 +100,7 @@ namespace CrawlingAlgorithmsTest
                 Tuple.Create("C", 1.0)
             });
             var exception = Assert.Throws<ArgumentException>(
-                 () => СrawlingАlgorithms.GetConnectedComponents(adjacencyList));
+                 () => СrawlingАlgorithm.GetConnectedComponents(adjacencyList));
 
             Assert.Equal("Граф ориентированный." +
             " Связность не определяется.", exception.Message);

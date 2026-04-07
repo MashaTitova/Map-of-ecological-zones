@@ -290,7 +290,8 @@ var assemblies = [
   {
     "name": "WorkWithGraphsClassLibrary",
     "classes": [
-      { "name": "WorkWithGraphsClassLibrary.СrawlingАlgorithms", "rp": "WorkWithGraphsClassLibrary_СrawlingАlgorithms.html", "cl": 92, "ucl": 21, "cal": 113, "tl": 151, "cb": 38, "tb": 44, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "WorkWithGraphsClassLibrary.СrawlingАlgorithm", "rp": "WorkWithGraphsClassLibrary_СrawlingАlgorithm.html", "cl": 92, "ucl": 21, "cal": 113, "tl": 148, "cb": 38, "tb": 44, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "WorkWithGraphsClassLibrary.DijkstraAlgorithm", "rp": "WorkWithGraphsClassLibrary_DijkstraAlgorithm.html", "cl": 68, "ucl": 0, "cal": 68, "tl": 111, "cb": 30, "tb": 30, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
 ];
 
@@ -305,10 +306,16 @@ var riskHotspotMetrics = [
 
 var riskHotspots = [
   {
-    "assembly": "WorkWithGraphsClassLibrary", "class": "WorkWithGraphsClassLibrary.СrawlingАlgorithms", "reportPath": "WorkWithGraphsClassLibrary_СrawlingАlgorithms.html", "methodName": "DFSRecursive(System.String,System.Collections.Generic.HashSet`1<System.String>,System.Collections.Generic.List`1<System.String>,System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.Tuple`2<System.String,System.Double>>>)", "methodShortName": "DFSRecursive(...)", "fileIndex": 0, "line": 74,
+    "assembly": "WorkWithGraphsClassLibrary", "class": "WorkWithGraphsClassLibrary.СrawlingАlgorithm", "reportPath": "WorkWithGraphsClassLibrary_СrawlingАlgorithm.html", "methodName": "DFSRecursive(System.String,System.Collections.Generic.HashSet`1<System.String>,System.Collections.Generic.List`1<System.String>,System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.Tuple`2<System.String,System.Double>>>)", "methodShortName": "DFSRecursive(...)", "fileIndex": 0, "line": 71,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
+    ]},
+  {
+    "assembly": "WorkWithGraphsClassLibrary", "class": "WorkWithGraphsClassLibrary.DijkstraAlgorithm", "reportPath": "WorkWithGraphsClassLibrary_DijkstraAlgorithm.html", "methodName": "Dijkstra(System.String,System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.Tuple`2<System.String,System.Double>>>)", "methodShortName": "Dijkstra(...)", "fileIndex": 0, "line": 14,
+    "metrics": [
+      { "value": 20, "exceeded": false },
+      { "value": 20, "exceeded": true },
     ]},
 ];
 

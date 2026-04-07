@@ -3,20 +3,27 @@
   "WorkspaceRootPath": "D:\\_git\\Map-of-ecological-zones\\Map-of-ecological-zones\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{289A3AE1-E5FA-1AC0-B301-CE3DF5738734}|..\\WorkWithGraphsTest\\WorkWithGraphsTest.csproj|d:\\_git\\map-of-ecological-zones\\workwithgraphstest\\dijkstraalgorithmtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9840CFC-4D51-EFFB-3BDB-A09285A2EECF}|Map-of-ecological-zones.csproj|d:\\_git\\map-of-ecological-zones\\map-of-ecological-zones\\map-of-ecological-zones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9840CFC-4D51-EFFB-3BDB-A09285A2EECF}|Map-of-ecological-zones.csproj|solutionrelative:map-of-ecological-zones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{289A3AE1-E5FA-1AC0-B301-CE3DF5738734}|..\\WorkWithGraphsTest\\WorkWithGraphsTest.csproj|d:\\_git\\map-of-ecological-zones\\workwithgraphstest\\\u0441rawling\u0430lgorithmstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9840CFC-4D51-EFFB-3BDB-A09285A2EECF}|Map-of-ecological-zones.csproj|d:\\_git\\map-of-ecological-zones\\map-of-ecological-zones\\map-of-ecological-zones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C9840CFC-4D51-EFFB-3BDB-A09285A2EECF}|Map-of-ecological-zones.csproj|solutionrelative:map-of-ecological-zones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4437C661-A913-41A4-9B8C-5D4042F07E2C}|..\\WorkWithGraphsClassLibrary\\WorkWithGraphsClassLibrary.csproj|d:\\_git\\map-of-ecological-zones\\workwithgraphsclasslibrary\\additionalanalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4437C661-A913-41A4-9B8C-5D4042F07E2C}|..\\WorkWithGraphsClassLibrary\\WorkWithGraphsClassLibrary.csproj|d:\\_git\\map-of-ecological-zones\\workwithgraphsclasslibrary\\\u0441rawling\u0430lgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4437C661-A913-41A4-9B8C-5D4042F07E2C}|..\\WorkWithGraphsClassLibrary\\WorkWithGraphsClassLibrary.csproj|d:\\_git\\map-of-ecological-zones\\workwithgraphsclasslibrary\\dijkstraalgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9840CFC-4D51-EFFB-3BDB-A09285A2EECF}|Map-of-ecological-zones.csproj|d:\\_git\\map-of-ecological-zones\\map-of-ecological-zones\\map-of-ecological-zones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9840CFC-4D51-EFFB-3BDB-A09285A2EECF}|Map-of-ecological-zones.csproj|solutionrelative:map-of-ecological-zones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{289A3AE1-E5FA-1AC0-B301-CE3DF5738734}|..\\WorkWithGraphsTest\\WorkWithGraphsTest.csproj|d:\\_git\\map-of-ecological-zones\\workwithgraphstest\\\u0441rawling\u0430lgorithmstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4437C661-A913-41A4-9B8C-5D4042F07E2C}|..\\WorkWithGraphsClassLibrary\\WorkWithGraphsClassLibrary.csproj|d:\\_git\\map-of-ecological-zones\\workwithgraphsclasslibrary\\\u0441rawling\u0430lgorithms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{289A3AE1-E5FA-1AC0-B301-CE3DF5738734}|..\\WorkWithGraphsTest\\WorkWithGraphsTest.csproj|d:\\_git\\map-of-ecological-zones\\workwithgraphstest\\dijkstraalgorithmtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +33,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,67 +49,92 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "\u0421rawling\u0410lgorithmsTest.cs",
-              "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsTest\\\u0421rawling\u0410lgorithmsTest.cs",
-              "RelativeDocumentMoniker": "..\\WorkWithGraphsTest\\\u0421rawling\u0410lgorithmsTest.cs",
-              "ToolTip": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsTest\\\u0421rawling\u0410lgorithmsTest.cs",
-              "RelativeToolTip": "..\\WorkWithGraphsTest\\\u0421rawling\u0410lgorithmsTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T11:37:54.107Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DijkstraAlgorithmTest.cs",
-              "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsTest\\DijkstraAlgorithmTest.cs",
-              "RelativeDocumentMoniker": "..\\WorkWithGraphsTest\\DijkstraAlgorithmTest.cs",
-              "ToolTip": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsTest\\DijkstraAlgorithmTest.cs*",
-              "RelativeToolTip": "..\\WorkWithGraphsTest\\DijkstraAlgorithmTest.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T11:23:21.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DijkstraAlgorithm.cs",
-              "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsClassLibrary\\DijkstraAlgorithm.cs",
-              "RelativeDocumentMoniker": "..\\WorkWithGraphsClassLibrary\\DijkstraAlgorithm.cs",
-              "ToolTip": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsClassLibrary\\DijkstraAlgorithm.cs",
-              "RelativeToolTip": "..\\WorkWithGraphsClassLibrary\\DijkstraAlgorithm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T10:14:00.445Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Map-of-ecological-zones.cs",
               "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\Map-of-ecological-zones\\Map-of-ecological-zones.cs",
               "RelativeDocumentMoniker": "Map-of-ecological-zones.cs",
               "ToolTip": "D:\\_git\\Map-of-ecological-zones\\Map-of-ecological-zones\\Map-of-ecological-zones.cs",
               "RelativeToolTip": "Map-of-ecological-zones.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwLABAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAEsBAAAAAAAAAAAwwBECAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-29T15:05:56.071Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "\u0421rawling\u0410lgorithms.cs",
-              "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithms.cs",
-              "RelativeDocumentMoniker": "..\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithms.cs",
-              "ToolTip": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithms.cs",
-              "RelativeToolTip": "..\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithms.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAkwH4AAAArAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Map-of-ecological-zones.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\Map-of-ecological-zones\\Map-of-ecological-zones.cs",
+              "RelativeDocumentMoniker": "Map-of-ecological-zones.cs",
+              "ToolTip": "D:\\_git\\Map-of-ecological-zones\\Map-of-ecological-zones\\Map-of-ecological-zones.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Map-of-ecological-zones.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T11:36:26.466Z"
+              "WhenOpened": "2026-04-03T12:01:22.944Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdditionalAnalysis.cs",
+              "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsClassLibrary\\AdditionalAnalysis.cs",
+              "RelativeDocumentMoniker": "..\\WorkWithGraphsClassLibrary\\AdditionalAnalysis.cs",
+              "ToolTip": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsClassLibrary\\AdditionalAnalysis.cs",
+              "RelativeToolTip": "..\\WorkWithGraphsClassLibrary\\AdditionalAnalysis.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAQwGEAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T10:44:45.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "\u0421rawling\u0410lgorithm.cs",
+              "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithm.cs",
+              "RelativeDocumentMoniker": "..\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithm.cs",
+              "ToolTip": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithm.cs",
+              "RelativeToolTip": "..\\WorkWithGraphsClassLibrary\\\u0421rawling\u0410lgorithm.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T11:36:26.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DijkstraAlgorithm.cs",
+              "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsClassLibrary\\DijkstraAlgorithm.cs",
+              "RelativeDocumentMoniker": "..\\WorkWithGraphsClassLibrary\\DijkstraAlgorithm.cs",
+              "ToolTip": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsClassLibrary\\DijkstraAlgorithm.cs",
+              "RelativeToolTip": "..\\WorkWithGraphsClassLibrary\\DijkstraAlgorithm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T10:14:00.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "\u0421rawling\u0410lgorithmsTest.cs",
+              "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsTest\\\u0421rawling\u0410lgorithmsTest.cs",
+              "RelativeDocumentMoniker": "..\\WorkWithGraphsTest\\\u0421rawling\u0410lgorithmsTest.cs",
+              "ToolTip": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsTest\\\u0421rawling\u0410lgorithmsTest.cs",
+              "RelativeToolTip": "..\\WorkWithGraphsTest\\\u0421rawling\u0410lgorithmsTest.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAkwCsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T11:37:54.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DijkstraAlgorithmTest.cs",
+              "DocumentMoniker": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsTest\\DijkstraAlgorithmTest.cs",
+              "RelativeDocumentMoniker": "..\\WorkWithGraphsTest\\DijkstraAlgorithmTest.cs",
+              "ToolTip": "D:\\_git\\Map-of-ecological-zones\\WorkWithGraphsTest\\DijkstraAlgorithmTest.cs",
+              "RelativeToolTip": "..\\WorkWithGraphsTest\\DijkstraAlgorithmTest.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwJAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T13:30:56.689Z"
             }
           ]
         }

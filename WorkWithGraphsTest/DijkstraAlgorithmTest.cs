@@ -126,7 +126,6 @@ public class DijkstraAlgorithmTest
     [Fact]
     public void Dijkstra_DisconnectedGraph_HandlesUnreachableVertices()
     {
-        // Arrange
         var graph = new Dictionary<string, List<Tuple<string, double>>>
         {
             ["A"] = new List<Tuple<string, double>> { Tuple.Create("B", 3.0) },
@@ -135,10 +134,8 @@ public class DijkstraAlgorithmTest
         };
         string startVertex = "A";
 
-        // Act
         var (distances, paths) = DijkstraAlgorithm.Dijkstra(startVertex, graph);
 
-        // Assert
         Assert.Equal(0.0, distances["A"]);
         Assert.Equal(3.0, distances["B"]);
         Assert.True(double.IsPositiveInfinity(distances["C"])); 

@@ -304,13 +304,18 @@ namespace Map_of_ecological_zones
                     {
                         panel_DijkstraAlgorithm.Visible = true;
                     }
+                    if (tmp.Name == "button_DepthAnalysis")
+                    {
+                        panel_AdditionalAnalysis.Visible = true;
+                    }
                     panel_AdjacencyList.Visible = true;
                     panel_DescriptionOfThePeaks.Visible = true;
                     panel_Home.Visible = false;
                     button_Return.Visible = true;
+                    
                 }
             }
-            
+
         }
         private void ReturnInMenu_button_Click(object sender, EventArgs e)
         {
@@ -336,6 +341,13 @@ namespace Map_of_ecological_zones
                 textBox_ShortestPathObject2.Text = "";
                 textBox_ShortestPath.Text = "";
             }
+            if(panel_AdditionalAnalysis.Visible == true)
+            {
+                panel_AdditionalAnalysis.Visible = false;
+                textBox_EnviromentalNodes.Text = "";
+                textBox_MSTEdges.Text = "";
+                textBox_MainTask.Text = "";
+            }
 
         }
         private void GetBypassAlgorithms(object sender, EventArgs e)
@@ -346,7 +358,7 @@ namespace Map_of_ecological_zones
                 string orderStr = "";
                 if (comboBox_ChooseBFS.Text != "")
                 {
-                    List<string> order = СrawlingАlgorithms.BFS(comboBox_ChooseBFS.Text, adjacencyList);
+                    List<string> order = СrawlingАlgorithm.BFS(comboBox_ChooseBFS.Text, adjacencyList);
                     for (int i = 0; i < order.Count - 1; i++)
                     {
                         orderStr += $"{order[i].ToString()}, ";
@@ -360,7 +372,7 @@ namespace Map_of_ecological_zones
                 string orderStr = "";
                 if (comboBox_ChooseDFS.Text != "")
                 {
-                    List<string> order = СrawlingАlgorithms.DFS(comboBox_ChooseDFS.Text, adjacencyList);
+                    List<string> order = СrawlingАlgorithm.DFS(comboBox_ChooseDFS.Text, adjacencyList);
                     for (int i = 0; i < order.Count - 1; i++)
                     {
                         orderStr += $"{order[i].ToString()}, ";
@@ -373,7 +385,7 @@ namespace Map_of_ecological_zones
             {
                 try
                 {
-                    bool reachable = СrawlingАlgorithms.IsReachable(comboBox_VertexFrom.Text, comboBox_VertexIn.Text, adjacencyList);
+                    bool reachable = СrawlingАlgorithm.IsReachable(comboBox_VertexFrom.Text, comboBox_VertexIn.Text, adjacencyList);
                     if (reachable)
                     {
                         textBox_Reachability.Text = $"Вершина {comboBox_VertexIn.Text} достижима из вершины {comboBox_VertexFrom.Text}";
@@ -393,7 +405,7 @@ namespace Map_of_ecological_zones
             {
                 try
                 {
-                    List<List<string>> components = СrawlingАlgorithms.GetConnectedComponents(adjacencyList);
+                    List<List<string>> components = СrawlingАlgorithm.GetConnectedComponents(adjacencyList);
                     for (int i = 0; i < components.Count; i++)
                     {
                         textBox_ConnectivityСomponents.Text += $"{string.Join(", ", components[i])}{Environment.NewLine}";
@@ -408,9 +420,9 @@ namespace Map_of_ecological_zones
         }
         private void GetDijkstraAlgorithm(object sender, EventArgs e)
         {
-            
+
             var tmp = (Button)sender;
-            if(tmp.Name == "button_ShortestDistance")
+            if (tmp.Name == "button_ShortestDistance")
             {
                 textBox_ShortestDistance.Text = "";
                 textBox_Route.Text = "";
@@ -420,11 +432,11 @@ namespace Map_of_ecological_zones
                     Dictionary<string, string> paths = DijkstraAlgorithm.Dijkstra(comboBox_ShortestDistanceObject.Text, adjacencyList).Item2;
                     foreach (var entry in distances)
                     {
-                        if(entry.Value != double.PositiveInfinity && entry.Value != 0)
+                        if (entry.Value != double.PositiveInfinity && entry.Value != 0)
                             textBox_ShortestDistance.Text += $"Вершина {entry.Key}: расстояние = {entry.Value} {Environment.NewLine}";
                         else
                             if (entry.Value == double.PositiveInfinity)
-                            textBox_ShortestDistance.Text += $"Вершина {entry.Key} недостижима {Environment.NewLine}";
+                                textBox_ShortestDistance.Text += $"Вершина {entry.Key} недостижима {Environment.NewLine}";
                     }
                     foreach (var entry in paths)
                     {
@@ -432,7 +444,7 @@ namespace Map_of_ecological_zones
                     }
                 }
             }
-            if(tmp.Name == "button_ShortestPath")
+            if (tmp.Name == "button_ShortestPath")
             {
                 textBox_ShortestPath.Text = "";
                 if (textBox_ShortestPathObject1.Text != "" && textBox_ShortestPathObject2.Text != "")
@@ -448,6 +460,59 @@ namespace Map_of_ecological_zones
                         textBox_ShortestPath.Text = ex.Message;
                     }
                 }
+            }
+        }
+        private void GetAdditionalAnalysis(object sender, EventArgs e)
+        {
+            var tmp = (Button)sender;
+            if (tmp.Name == "button_MSTEdges")
+            {
+
+                try
+                {
+                    (List<Tuple<string, string, double>> mst, double totalWeight) = AdditionalAnalysis.MST(adjacencyList);
+                    textBox_MSTEdges.Text += $"Ребра минимального остовного дерева:{Environment.NewLine}";
+                    foreach (var edge in mst)
+                        textBox_MSTEdges.Text += $"{edge.Item1} — {edge.Item2}, вес: {edge.Item3}{Environment.NewLine}";
+                    textBox_MSTEdges.Text += $"Вес минимального остовного дерева:{Environment.NewLine}";
+                    textBox_MSTEdges.Text += $"{totalWeight}{Environment.NewLine}";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(
+                       $"{ex.Message}",
+                       "Несоответствие графа",
+                       MessageBoxButtons.OK,
+                       MessageBoxIcon.Warning);
+                    return;
+                }
+
+            }
+            if (tmp.Name == "button_EnviromentalNodes")
+            {
+                List<string> articulationPoints = AdditionalAnalysis.FindArticulationPoints(adjacencyList);
+                for (int i = 0; i < articulationPoints.Count; i++)
+                {
+                    textBox_EnviromentalNodes.Text += $"{articulationPoints[i]}{Environment.NewLine}";
+                }
+            }
+        }
+        private void GetMainTask(object sender, EventArgs e)
+        {
+            foreach(var vertex  in adjacencyList.Keys) 
+            {
+                Dictionary<string, double> distances = DijkstraAlgorithm.Dijkstra(vertex, adjacencyList).Item1;
+                Dictionary<string, string> paths = DijkstraAlgorithm.Dijkstra(vertex, adjacencyList).Item2;
+                foreach (var entry in paths)
+                {
+                    textBox_Route.Text += $"Вершина {entry.Key}. Путь: {DijkstraAlgorithm.BuildPath(entry.Key, entry.Value, paths)}. ";
+                }
+                foreach (var entry in distances)
+                {
+                    if (entry.Value != double.PositiveInfinity && entry.Value != 0)
+                        textBox_ShortestDistance.Text += $"Расстояние = {entry.Value} {Environment.NewLine}";
+                }
+                
             }
         }
         private void GetInfo(object sender, EventArgs e)
