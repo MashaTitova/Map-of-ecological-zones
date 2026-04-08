@@ -70,11 +70,12 @@
             button_Info = new Button();
             panel_Home = new Panel();
             panel_HomeButtons = new Panel();
+            button_HomeTime = new Button();
             button_LoadFile = new Button();
             button_СrawlingАlgorithms = new Button();
+            button_ExitApp = new Button();
             button_DijkstraAlgorithm = new Button();
             button_DepthAnalysis = new Button();
-            button_ExitApp = new Button();
             label_NameApp = new Label();
             label_TaskApp = new Label();
             panel_DijkstraAlgorithm = new Panel();
@@ -114,6 +115,18 @@
             textBox_MainTask = new TextBox();
             label_MainTask = new Label();
             button3 = new Button();
+            tabControl_Time = new TabControl();
+            tabPage_Time = new TabPage();
+            textBox_TimeMST = new TextBox();
+            textBox_TimeDijkstra = new TextBox();
+            textBox_TimeDFS = new TextBox();
+            textBox_TimeBFS = new TextBox();
+            button_Time = new Button();
+            label_TimeMST = new Label();
+            label_TimeDijkstra = new Label();
+            label_TimeDFS = new Label();
+            label_TimeBFS = new Label();
+            label_Time = new Label();
             panel_DescriptionOfThePeaks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView_DescriptionOfThePeaks).BeginInit();
             panel_AdjacencyList.SuspendLayout();
@@ -140,6 +153,8 @@
             panel_EnviromentalNodes.SuspendLayout();
             tabPage_MainTask.SuspendLayout();
             panel_MainTask.SuspendLayout();
+            tabControl_Time.SuspendLayout();
+            tabPage_Time.SuspendLayout();
             SuspendLayout();
             // 
             // panel_DescriptionOfThePeaks
@@ -618,15 +633,30 @@
             // panel_HomeButtons
             // 
             panel_HomeButtons.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel_HomeButtons.Controls.Add(button_HomeTime);
             panel_HomeButtons.Controls.Add(button_LoadFile);
             panel_HomeButtons.Controls.Add(button_СrawlingАlgorithms);
+            panel_HomeButtons.Controls.Add(button_ExitApp);
             panel_HomeButtons.Controls.Add(button_DijkstraAlgorithm);
             panel_HomeButtons.Controls.Add(button_DepthAnalysis);
-            panel_HomeButtons.Controls.Add(button_ExitApp);
-            panel_HomeButtons.Location = new Point(434, 285);
+            panel_HomeButtons.Location = new Point(406, 226);
             panel_HomeButtons.Name = "panel_HomeButtons";
-            panel_HomeButtons.Size = new Size(582, 609);
+            panel_HomeButtons.Size = new Size(582, 688);
             panel_HomeButtons.TabIndex = 15;
+            // 
+            // button_HomeTime
+            // 
+            button_HomeTime.Anchor = AnchorStyles.None;
+            button_HomeTime.AutoSize = true;
+            button_HomeTime.Font = new Font("Calibri", 12F, FontStyle.Bold);
+            button_HomeTime.Location = new Point(18, 487);
+            button_HomeTime.Margin = new Padding(4, 2, 4, 2);
+            button_HomeTime.Name = "button_HomeTime";
+            button_HomeTime.Size = new Size(546, 90);
+            button_HomeTime.TabIndex = 18;
+            button_HomeTime.Text = "Время работы алгоритмов";
+            button_HomeTime.UseVisualStyleBackColor = true;
+            button_HomeTime.Click += Home_button_Click;
             // 
             // button_LoadFile
             // 
@@ -634,7 +664,7 @@
             button_LoadFile.AutoSize = true;
             button_LoadFile.BackColor = Color.Transparent;
             button_LoadFile.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            button_LoadFile.Location = new Point(18, 71);
+            button_LoadFile.Location = new Point(18, 111);
             button_LoadFile.Margin = new Padding(4, 2, 4, 2);
             button_LoadFile.Name = "button_LoadFile";
             button_LoadFile.Size = new Size(546, 90);
@@ -649,7 +679,7 @@
             button_СrawlingАlgorithms.AutoSize = true;
             button_СrawlingАlgorithms.BackColor = Color.Transparent;
             button_СrawlingАlgorithms.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            button_СrawlingАlgorithms.Location = new Point(18, 165);
+            button_СrawlingАlgorithms.Location = new Point(18, 205);
             button_СrawlingАlgorithms.Margin = new Padding(4, 2, 4, 2);
             button_СrawlingАlgorithms.Name = "button_СrawlingАlgorithms";
             button_СrawlingАlgorithms.Size = new Size(546, 90);
@@ -658,12 +688,26 @@
             button_СrawlingАlgorithms.UseVisualStyleBackColor = false;
             button_СrawlingАlgorithms.Click += Home_button_Click;
             // 
+            // button_ExitApp
+            // 
+            button_ExitApp.Anchor = AnchorStyles.None;
+            button_ExitApp.AutoSize = true;
+            button_ExitApp.Font = new Font("Calibri", 12F, FontStyle.Bold);
+            button_ExitApp.Location = new Point(18, 581);
+            button_ExitApp.Margin = new Padding(4, 2, 4, 2);
+            button_ExitApp.Name = "button_ExitApp";
+            button_ExitApp.Size = new Size(546, 90);
+            button_ExitApp.TabIndex = 16;
+            button_ExitApp.Text = "Выход из приложения";
+            button_ExitApp.UseVisualStyleBackColor = true;
+            button_ExitApp.Click += Home_button_Click;
+            // 
             // button_DijkstraAlgorithm
             // 
             button_DijkstraAlgorithm.Anchor = AnchorStyles.None;
             button_DijkstraAlgorithm.AutoSize = true;
             button_DijkstraAlgorithm.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            button_DijkstraAlgorithm.Location = new Point(18, 259);
+            button_DijkstraAlgorithm.Location = new Point(18, 299);
             button_DijkstraAlgorithm.Margin = new Padding(4, 2, 4, 2);
             button_DijkstraAlgorithm.Name = "button_DijkstraAlgorithm";
             button_DijkstraAlgorithm.Size = new Size(546, 90);
@@ -677,7 +721,7 @@
             button_DepthAnalysis.Anchor = AnchorStyles.None;
             button_DepthAnalysis.AutoSize = true;
             button_DepthAnalysis.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            button_DepthAnalysis.Location = new Point(18, 353);
+            button_DepthAnalysis.Location = new Point(18, 393);
             button_DepthAnalysis.Margin = new Padding(4, 2, 4, 2);
             button_DepthAnalysis.Name = "button_DepthAnalysis";
             button_DepthAnalysis.Size = new Size(546, 90);
@@ -685,20 +729,6 @@
             button_DepthAnalysis.Text = "Углублённый анализ графа";
             button_DepthAnalysis.UseVisualStyleBackColor = true;
             button_DepthAnalysis.Click += Home_button_Click;
-            // 
-            // button_ExitApp
-            // 
-            button_ExitApp.Anchor = AnchorStyles.None;
-            button_ExitApp.AutoSize = true;
-            button_ExitApp.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            button_ExitApp.Location = new Point(18, 447);
-            button_ExitApp.Margin = new Padding(4, 2, 4, 2);
-            button_ExitApp.Name = "button_ExitApp";
-            button_ExitApp.Size = new Size(546, 90);
-            button_ExitApp.TabIndex = 16;
-            button_ExitApp.Text = "Выход из приложения";
-            button_ExitApp.UseVisualStyleBackColor = true;
-            button_ExitApp.Click += Home_button_Click;
             // 
             // label_NameApp
             // 
@@ -1109,6 +1139,7 @@
             button_MainTask.TabIndex = 16;
             button_MainTask.Text = "Рассчитать";
             button_MainTask.UseVisualStyleBackColor = false;
+            button_MainTask.Click += GetMainTask;
             // 
             // textBox_MainTask
             // 
@@ -1144,6 +1175,138 @@
             button3.Text = "Справка пользователя";
             button3.UseVisualStyleBackColor = false;
             // 
+            // tabControl_Time
+            // 
+            tabControl_Time.Anchor = AnchorStyles.None;
+            tabControl_Time.Controls.Add(tabPage_Time);
+            tabControl_Time.Location = new Point(6, 18);
+            tabControl_Time.Name = "tabControl_Time";
+            tabControl_Time.SelectedIndex = 0;
+            tabControl_Time.Size = new Size(745, 1059);
+            tabControl_Time.TabIndex = 7;
+            tabControl_Time.Visible = false;
+            // 
+            // tabPage_Time
+            // 
+            tabPage_Time.Controls.Add(textBox_TimeMST);
+            tabPage_Time.Controls.Add(textBox_TimeDijkstra);
+            tabPage_Time.Controls.Add(textBox_TimeDFS);
+            tabPage_Time.Controls.Add(textBox_TimeBFS);
+            tabPage_Time.Controls.Add(button_Time);
+            tabPage_Time.Controls.Add(label_TimeMST);
+            tabPage_Time.Controls.Add(label_TimeDijkstra);
+            tabPage_Time.Controls.Add(label_TimeDFS);
+            tabPage_Time.Controls.Add(label_TimeBFS);
+            tabPage_Time.Controls.Add(label_Time);
+            tabPage_Time.Location = new Point(8, 46);
+            tabPage_Time.Name = "tabPage_Time";
+            tabPage_Time.Padding = new Padding(3);
+            tabPage_Time.Size = new Size(729, 1005);
+            tabPage_Time.TabIndex = 0;
+            tabPage_Time.Text = "Сравнение времени";
+            tabPage_Time.UseVisualStyleBackColor = true;
+            // 
+            // textBox_TimeMST
+            // 
+            textBox_TimeMST.Location = new Point(10, 707);
+            textBox_TimeMST.Multiline = true;
+            textBox_TimeMST.Name = "textBox_TimeMST";
+            textBox_TimeMST.Size = new Size(703, 79);
+            textBox_TimeMST.TabIndex = 12;
+            textBox_TimeMST.Text = " ";
+            // 
+            // textBox_TimeDijkstra
+            // 
+            textBox_TimeDijkstra.Location = new Point(12, 536);
+            textBox_TimeDijkstra.Multiline = true;
+            textBox_TimeDijkstra.Name = "textBox_TimeDijkstra";
+            textBox_TimeDijkstra.Size = new Size(703, 79);
+            textBox_TimeDijkstra.TabIndex = 11;
+            // 
+            // textBox_TimeDFS
+            // 
+            textBox_TimeDFS.Location = new Point(12, 345);
+            textBox_TimeDFS.Multiline = true;
+            textBox_TimeDFS.Name = "textBox_TimeDFS";
+            textBox_TimeDFS.Size = new Size(703, 79);
+            textBox_TimeDFS.TabIndex = 10;
+            // 
+            // textBox_TimeBFS
+            // 
+            textBox_TimeBFS.Location = new Point(12, 174);
+            textBox_TimeBFS.Multiline = true;
+            textBox_TimeBFS.Name = "textBox_TimeBFS";
+            textBox_TimeBFS.Size = new Size(703, 79);
+            textBox_TimeBFS.TabIndex = 9;
+            // 
+            // button_Time
+            // 
+            button_Time.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            button_Time.BackColor = Color.Transparent;
+            button_Time.Location = new Point(8, 894);
+            button_Time.Name = "button_Time";
+            button_Time.Size = new Size(210, 104);
+            button_Time.TabIndex = 8;
+            button_Time.Text = "Рассчитать";
+            button_Time.UseVisualStyleBackColor = false;
+            button_Time.Click += button_Time_Click;
+            // 
+            // label_TimeMST
+            // 
+            label_TimeMST.BackColor = Color.Transparent;
+            label_TimeMST.Font = new Font("Calibri", 13.875F, FontStyle.Bold);
+            label_TimeMST.Location = new Point(4, 622);
+            label_TimeMST.Name = "label_TimeMST";
+            label_TimeMST.Size = new Size(723, 86);
+            label_TimeMST.TabIndex = 7;
+            label_TimeMST.Text = "MST";
+            label_TimeMST.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label_TimeDijkstra
+            // 
+            label_TimeDijkstra.BackColor = Color.Transparent;
+            label_TimeDijkstra.Font = new Font("Calibri", 13.875F, FontStyle.Bold);
+            label_TimeDijkstra.Location = new Point(7, 444);
+            label_TimeDijkstra.Name = "label_TimeDijkstra";
+            label_TimeDijkstra.Size = new Size(723, 86);
+            label_TimeDijkstra.TabIndex = 6;
+            label_TimeDijkstra.Text = "Алгоритм Дейкстры";
+            label_TimeDijkstra.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label_TimeDFS
+            // 
+            label_TimeDFS.BackColor = Color.Transparent;
+            label_TimeDFS.Font = new Font("Calibri", 13.875F, FontStyle.Bold);
+            label_TimeDFS.Location = new Point(-8, 256);
+            label_TimeDFS.Name = "label_TimeDFS";
+            label_TimeDFS.Size = new Size(723, 86);
+            label_TimeDFS.TabIndex = 5;
+            label_TimeDFS.Text = "DFS";
+            label_TimeDFS.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label_TimeBFS
+            // 
+            label_TimeBFS.BackColor = Color.Transparent;
+            label_TimeBFS.Font = new Font("Calibri", 13.875F, FontStyle.Bold);
+            label_TimeBFS.Location = new Point(15, 89);
+            label_TimeBFS.Name = "label_TimeBFS";
+            label_TimeBFS.Size = new Size(683, 86);
+            label_TimeBFS.TabIndex = 4;
+            label_TimeBFS.Text = "BFS";
+            label_TimeBFS.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label_Time
+            // 
+            label_Time.BackColor = Color.Transparent;
+            label_Time.Dock = DockStyle.Top;
+            label_Time.Font = new Font("Calibri", 13.875F, FontStyle.Bold);
+            label_Time.Location = new Point(3, 3);
+            label_Time.Name = "label_Time";
+            label_Time.Size = new Size(723, 86);
+            label_Time.TabIndex = 3;
+            label_Time.Text = "Сравнение времени работы алгоритмов";
+            label_Time.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Form_MapOfEcologicalZones
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -1152,12 +1315,13 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1453, 1230);
             Controls.Add(panel_AdditionalAnalysis);
+            Controls.Add(tabControl_Time);
+            Controls.Add(panel_Home);
             Controls.Add(panel_DijkstraAlgorithm);
             Controls.Add(panel_BypassAlgorithm);
             Controls.Add(panel_Buttons);
             Controls.Add(panel_AdjacencyList);
             Controls.Add(panel_DescriptionOfThePeaks);
-            Controls.Add(panel_Home);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form_MapOfEcologicalZones";
             Text = "Карта экологических зон";
@@ -1198,6 +1362,9 @@
             tabPage_MainTask.ResumeLayout(false);
             panel_MainTask.ResumeLayout(false);
             panel_MainTask.PerformLayout();
+            tabControl_Time.ResumeLayout(false);
+            tabPage_Time.ResumeLayout(false);
+            tabPage_Time.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1254,23 +1421,15 @@
         private Panel panel_DijkstraAlgorithm;
         private TabControl tabControl_DijkstraAlgorithm;
         private TabPage tabPage_DijkstraAlgorithm;
-        private Panel panel_ShortestPath;
         private Panel panel_ShortestDistance;
-        private Button button_ShortestPath;
-        private Label label5;
-        private Label label_ShortestPath;
+        private Label label_TimeMST;
         private Label label_ShortestDistanceObject;
         private Button button_ShortestDistance;
         private Label label_ShortestDistanceObjects;
         private TextBox textBox_ShortestDistance;
         private Label label_ShortestDistance;
-        private Label label_ShortestPathObject1;
-        private Label label_ShortestPathObject2;
         private Label label_Route;
         private ComboBox comboBox_ShortestDistanceObject;
-        private TextBox textBox_ShortestPathObject1;
-        private TextBox textBox_ShortestPathObject2;
-        private TextBox textBox_ShortestPath;
         private TextBox textBox_Route;
         private Panel panel_AdditionalAnalysis;
         private TabControl tabControl_AdditionalAnalysis;
@@ -1289,5 +1448,25 @@
         private Label label_MainTask;
         private Button button3;
         private Button button_MainTask;
+        private Panel panel_ShortestPath;
+        private TextBox textBox_ShortestPath;
+        private TextBox textBox_ShortestPathObject2;
+        private TextBox textBox_ShortestPathObject1;
+        private Label label_ShortestPathObject1;
+        private Label label_ShortestPathObject2;
+        private Button button_ShortestPath;
+        private Label label_ShortestPath;
+        private TabControl tabControl_Time;
+        private TabPage tabPage_Time;
+        private Label label_TimeDijkstra;
+        private Label label_TimeDFS;
+        private Label label_TimeBFS;
+        private Label label_Time;
+        private TextBox textBox_TimeMST;
+        private TextBox textBox_TimeDijkstra;
+        private TextBox textBox_TimeDFS;
+        private TextBox textBox_TimeBFS;
+        private Button button_Time;
+        private Button button_HomeTime;
     }
 }
